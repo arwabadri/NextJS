@@ -10,11 +10,8 @@ import { fetchRevenue } from '@/app/lib/data';
 // https://www.chartjs.org/
 // https://airbnb.io/visx/
 
-export default async function RevenueChart({
-  revenue,
-}: {
-  revenue: Revenue[];
-}) {
+export default async function RevenueChart(){
+  const revenue = await fetchRevenue(); // Fetch data inside the component
   const chartHeight = 350;
   // NOTE: comment in this code when you get to this point in the course
 
@@ -64,3 +61,4 @@ export default async function RevenueChart({
     </div>
   );
 }
+
